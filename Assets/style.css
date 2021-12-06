@@ -1,0 +1,19 @@
+.city {
+    border: solid ;
+    margin:  25px;
+    padding: 100px;
+    
+}
+
+.search {
+    margin: 25px;
+}
+
+.hero-body{
+    background-color: #97BFB4;
+}
+
+.control{
+   
+    margin-bottom: 350px;
+}

@@ -1,6 +1,7 @@
 //let apiKey = "7fee86a490b6cb5d1e5a78e521dbeb22";
 let searchText = document.getElementById('textInput')
 let searchDiv = document.querySelector('#btn')
+let currentTemp = document.querySelector('.current-temp')
 let cities = [];
 
 
@@ -56,9 +57,9 @@ const getWeather = function(searchedCity) {
         console.log(response);
         response.json().then(function(data){
           console.log(data.list[0].main.temp)
-          
 
-          //displayWeather(data, searchedCity);
+
+          displayWeather(data, searchedCity);
         })
            }
           }
@@ -71,7 +72,8 @@ const getWeather = function(searchedCity) {
 
 //3. function to display weather information which includes making current current templates update
 
-  // let displayWeather = function(weather, theCity){
-  //   let todaysDate = document.createElement("span")
-  //   todaysDate.textContent=" (" mo
-  // }
+  let displayWeather = function(temp, theCity){
+    currentTemp.textContent= temp;
+
+
+  }

@@ -45,7 +45,7 @@ let storage = function(){
 
 const getWeather = function(searchedCity) {
     let apiURL =
-      `https://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&units=imperial&appid=7fee86a490b6cb5d1e5a78e521dbeb22`;
+      `https://api.openweathermap.org/data/2.5/forecast?q=${searchedCity}&units=imperial&appid=7fee86a490b6cb5d1e5a78e521dbeb22`;
 
       // make a get request to url
       fetch(apiURL)
@@ -55,25 +55,13 @@ const getWeather = function(searchedCity) {
 
         console.log(response);
         response.json().then(function(data){
-          console.log(data, searchedCity)
+          console.log(data.list[0].main.temp)
+          
+
           //displayWeather(data, searchedCity);
         })
-          
-          
-          // .then(function(data){
-          //   const theResults = data.results;
-          //    let temperature = theResults.main.temp
-
-          
-          //   console.log(temperature);
-
-    
-          // console.log(temp.main[0].id.temp);
-            //displayWeather(data, city);
-    
-           }//);
+           }
           }
-        //}
         )
       };
     
@@ -83,7 +71,7 @@ const getWeather = function(searchedCity) {
 
 //3. function to display weather information which includes making current current templates update
 
-  let displayWeather = function(weather, theCity){
-    let todaysDate = document.createElement("span")
-    todaysDate.textContent=" (" mo
-  }
+  // let displayWeather = function(weather, theCity){
+  //   let todaysDate = document.createElement("span")
+  //   todaysDate.textContent=" (" mo
+  // }
